@@ -1,0 +1,174 @@
+%----------------------------------------------------------------------------------------
+%	PREMIUM LATEX CV TEMPLATE - MODERN ACCENT
+%   Optimized for human readability & ATS scanners
+%----------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+% --- Core Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+
+% --- Color Palette ---
+\definecolor{primary}{HTML}{1A365D}      % Deep Navy for Headings
+\definecolor{secondary}{HTML}{2B6CB0}    % Slate Blue for Subheadings
+\definecolor{textdark}{HTML}{2D3748}     % Charcoal for highly readable text
+\definecolor{textlight}{HTML}{718096}    % Cool Grey for dates and metadata
+\definecolor{linkcolor}{HTML}{2B6CB0}    % Elegant blue for links
+
+% --- Page Setup ---
+\color{textdark}
+\pagestyle{empty}
+\urlstyle{same}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    filecolor=linkcolor,      
+    urlcolor=linkcolor,
+}
+
+% --- Section Formatting ---
+\titleformat{\section}
+  {\color{primary}\large\bfseries\scshape}
+  {}
+  {0em}
+  {}
+  [{\color{secondary}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+
+% --- Custom Command Blocks ---
+% 1. Single bullet point element
+\newcommand{\resumeItem}[1]{
+  \item\small\color{textdark}{#1}
+}
+
+% 2. Main Title Header (ATS friendly structure)
+\newcommand{\resumeHeader}[6]{
+  \begin{center}
+    {\Huge\bfseries\color{primary} #1} \\ \vspace{5pt}
+    {\small\color{secondary}\bfseries\scshape #2} \\ \vspace{6pt}
+    \small\color{textlight}{
+      \faEnvelope\ \href{mailto:#3}{#3} \quad$\cdot$\quad 
+      \faPhone*\ #4 \quad$\cdot$\quad 
+      \faLinkedin\ \href{#5}{#5} \quad$\cdot$\quad 
+      \faGithub\ \href{#6}{#6}
+    }
+  \end{center}
+  \vspace{-10pt}
+}
+
+% 3. Standard Job Experience Row
+\newcommand{\resumeJob}[4]{
+  \vspace{3pt}
+  \noindent
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} -- \textit{#2} & \small\color{textlight}{#3} \\
+    \small\color{secondary}{#4} & \\
+  \end{tabular*}
+  \vspace{-6pt}
+}
+
+% 4. Standard Education Row
+\newcommand{\resumeEducation}[4]{
+  \vspace{3pt}
+  \noindent
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small\color{textlight}{#3} \\
+    \textit{#2} & \small\color{secondary}{#4} \\
+  \end{tabular*}
+  \vspace{-6pt}
+}
+
+% 5. Standard Projects Row
+\newcommand{\resumeProject}[3]{
+  \vspace{3pt}
+  \noindent
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} \quad {\small\color{secondary}{\textit{#2}}} & \small\color{textlight}{#3} \\
+  \end{tabular*}
+  \vspace{-6pt}
+}
+
+% 6. Skills listing line
+\newcommand{\resumeSkillGroup}[2]{
+  \vspace{2pt}
+  \noindent\textbf{#1}: \small\color{textdark}{#2} \\
+}
+
+%----------------------------------------------------------------------------------------
+%	CV CONTENT STARTS HERE
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% --- Header Section ---
+\resumeHeader
+  {Alex Rivers}
+  {Senior Software Engineer}
+  {alex.rivers@email.com}
+  {+1 (555) 019-2834}
+  {linkedin.com/in/alexrivers}
+  {github.com/alexrivers}
+
+% --- Professional Experience ---
+\section{Work Experience}
+
+\resumeJob
+  {Senior Backend Engineer}
+  {CloudScale Solutions}
+  {Oct 2022 -- Present}
+  {San Francisco, CA (Remote)}
+  \begin{itemize}[leftmargin=0.15in, label=\textbullet, nosep, itemsep=3pt]
+    \resumeItem{Architected and migrated legacy monolith API services to a distributed Go/gRPC microservices structure, boosting throughput by 140\% and decreasing API latency from 250ms to 45ms.}
+    \resumeItem{Spearheaded development of a real-time event-driven notification engine using Kafka and Redis, processing 15M+ active daily events with 99.99\% reliability.}
+    \resumeItem{Designed and implemented advanced query caching layers, reducing PostgreSQL read loads by 35\% and saving \$120k annually in cloud hosting expenses.}
+    \resumeItem{Mentored a team of 4 junior engineers, establishing high engineering standards through standard automated code checks, CI/CD pipelines, and detailed testing procedures.}
+  \end{itemize}
+
+\resumeJob
+  {Software Engineer II}
+  {TechStack Labs}
+  {Mar 2020 -- Sep 2022}
+  {Seattle, WA}
+  \begin{itemize}[leftmargin=0.15in, label=\textbullet, nosep, itemsep=3pt]
+    \resumeItem{Engineered a data ingestion pipeline using Python and AWS Lambda to process large-scale client logs, reducing data processing cycles by 3.5 hours per day.}
+    \resumeItem{Developed, tested, and shipped a React-based analytics dashboard, optimizing front-end performance by 32\% through efficient asset caching and lazy-loaded components.}
+    \resumeItem{Integrated third-party payment systems (Stripe, Paypal) with complex transactional workflows, decreasing billing exception errors by 18\%.}
+  \end{itemize}
+
+% --- Projects ---
+\section{Projects}
+
+\resumeProject
+  {DevFlow Serverless Framework}
+  {Python, AWS Lambda, DynamoDB, Terraform}
+  {Jan 2023 -- Aug 2023}
+  \begin{itemize}[leftmargin=0.15in, label=\textbullet, nosep, itemsep=3pt]
+    \resumeItem{Developed an open-source framework automating deployment of secure REST APIs, gaining 1,200+ stars on GitHub and supporting 50+ live deployments.}
+    \resumeItem{Wrote comprehensive automated unit and integration tests, maintaining 94\% code test coverage across the entire core package.}
+  \end{itemize}
+
+% --- Education ---
+\section{Education}
+
+\resumeEducation
+  {University of Washington}
+  {Bachelor of Science in Computer Science, GPA: 3.85 / 4.00}
+  {Sep 2016 -- Dec 2019}
+  {Seattle, WA}
+
+% --- Technical Skills ---
+\section{Skills}
+
+\resumeSkillGroup{Languages}{Python, Go, SQL (PostgreSQL), Javascript, Typescript, HTML/CSS}
+\resumeSkillGroup{Frameworks \& Libraries}{gRPC, FastAPI, Flask, React.js, Next.js, Node.js}
+\resumeSkillGroup{Cloud \& Infrastructure}{AWS (EC2, Lambda, ECS, RDS), Docker, Kubernetes, Terraform, CI/CD (GitHub Actions)}
+\resumeSkillGroup{Methodologies}{Microservices, REST APIs, Test-Driven Development (TDD), Agile/Scrum}
+
+\end{document}

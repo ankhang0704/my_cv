@@ -1,0 +1,121 @@
+%----------------------------------------------------------------------------------------
+%	CLASSIC MONOCHROME OVERLEAF RESUME
+%   IT Support / System Administrator CV (English Version)
+%   Using custom resume.cls (Trey Hunner Traditional Style)
+%----------------------------------------------------------------------------------------
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.45in,top=0.45in,right=0.45in,bottom=0.45in]{geometry} % Document margins
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+}
+
+\name{Nguyen An Khang} % Your name
+
+% Trey Hunner's address layout trick: 
+% 3rd call goes to addressone (prints 1st)
+% 1st call goes to addresstwo (prints 2nd)
+% 2nd call goes to addressthree (prints 3rd)
+\address{Lam Dong, Vietnam}
+\address{\href{https://github.com/ankhang0704}{github.com/ankhang0704} \\ \href{https://www.linkedin.com/in/khang-nguyen-0855893a7/}{linkedin.com/in/khang-nguyen-0855893a7}}
+\address{+84 946 754 751 \\ ankhang.nguyen0704@gmail.com}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Professional Summary}
+Information Technology graduate with hands-on experience in IT Helpdesk support, local network infrastructure (LAN/WAN), and database backup. Proactive and responsible in maintaining hardware/software systems, resolving technical incidents, and ensuring continuous operational uptime in enterprise environments.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Technical Skills}
+
+\begin{tabularx}{\linewidth}{ @{} >{\bfseries}l @{\hspace{4ex}} X }
+Technical Support & Windows OS installation/configuration, computer hardware, software, and printers. \\
+Network & LAN/WAN infrastructure operation, basic configuration of Routers, Switches, and Access Points. \\
+Databases & PostgreSQL, MySQL, SQL Server; performing data backups and recovery operations. \\
+Programming \& Web & Basic Python, C\#, HTML/CSS/JS; WordPress website administration and optimization. \\
+Languages & English (Professional working proficiency, read technical documentation).
+\end{tabularx}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{SOJO Company}{January 2026 -- Present}{IT Staff}{Phan Thiet, Binh Thuan}
+  \item Manage IT infrastructure consisting of 50+ workstations, network devices, and office printers, securing 99.8\% system uptime.
+  \item Provide technical support, resolving 95\% of hardware, software, and network incidents (LAN/WAN) within a 30-minute SLA.
+  \item Coordinate with software vendors to update, maintain, and resolve bugs in internal enterprise applications.
+  \item Automate weekly backups for corporate PostgreSQL/MySQL databases to ensure data integrity and zero data loss.
+\end{rSubsection}
+
+\begin{rSubsection}{The Sailing Bay Resort}{Sep 2025 -- Nov 2025}{IT Helpdesk \& Network Intern}{Mui Ne, Phan Thiet}
+  \item Delivered technical IT support for 80+ end-users across 5 resort departments, resolving hardware and software issues.
+  \item Assisted in configuring Access Points and maintaining LAN/WAN network infrastructure to secure resort-wide connectivity.
+  \item Performed physical hardware troubleshooting and basic maintenance for resort's VoIP telephone systems and peripherals.
+  \item Assisted in onboarding new employees on specialized Property Management System (PMS) hospitality software.
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	KEY PROJECTS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Key Projects}
+
+\begin{rSubsection}{Hotel Management System \& AI Chatbot}{August 2025 -- December 2025}{C\#, SQL Server, .NET Framework, OpenAI API (Graduation Thesis)}{}
+  \item Developed a desktop application for hotel reservations and customer services using C\#, SQL Server, and .NET Framework.
+  \item Optimized database queries, reducing data search latency to under 1.5 seconds.
+  \item Integrated OpenAI API to deploy a 24/7 AI Chatbot for automated customer inquiry responses.
+  \item Repository: \href{https://github.com/ankhang0704/QuanLyKhachSan_AI}{github.com/ankhang0704/QuanLyKhachSan\_AI}
+\end{rSubsection}
+
+\begin{rSubsection}{Website KOI Phan Thiet}{February 2026 -- March 2026}{WordPress, Elementor, PHP, MySQL, SEO Plugins (Freelance Project)}{}
+  \item Built and optimized an SEO-friendly WordPress website, achieving 85+ speed performance score on Google Lighthouse.
+  \item Configured security plugins and firewall rules, blocking 99\% of daily automated spam and brute-force attacks.
+  \item Link: \href{https://koiphanthiet.com}{koiphanthiet.com}
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+
+\begin{rSubsection}{Phan Thiet University}{2022 -- 2026}{B.S. in Information Technology}{Phan Thiet, Binh Thuan}
+  \item Graduation GPA: 3.2 / 4.0.
+  \item Core Coursework: Computer Networks, Database Management Systems, Information Security.
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	SOFT SKILLS \& ACTIVITIES
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Soft Skills \& Activities}
+
+\begin{tabularx}{\linewidth}{ @{} >{\bfseries}l @{\hspace{4ex}} X }
+Soft Skills & Technical problem-solving, team communication, analytical thinking, active listening. \\
+Activities & Technical lead member of PTU's IT Club.
+\end{tabularx}
+
+\end{rSection}
+
+\end{document}

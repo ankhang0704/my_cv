@@ -1,0 +1,51 @@
+# ====================================================================
+# Git Ignore Rules for LaTeX CV Project with AI Agents Workspace
+# ====================================================================
+
+# 1. Local Compiler Engine Binaries (Platform specific, do not commit)
+bin/
+*.exe
+
+# 2. LaTeX Auxiliary & Intermediate Output Files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex
+*.synctex.gz
+*.pdfsync
+*.alg
+*.acr
+*.acn
+*.glg
+*.glo
+*.ist
+*.blg
+*.bbl
+
+# 3. Python Bytecode, Caching, and Virtual Environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+env/
+ENV/
+
+# 4. IDE and Editor Settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# 5. Local Logs and Temporary Agent Files
+compile_out.log
+.gemini/
