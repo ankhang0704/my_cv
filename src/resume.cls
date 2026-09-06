@@ -20,7 +20,7 @@
 
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
-\LoadClass[11pt,letterpaper]{article} % Font size and paper type
+\LoadClass[10pt,letterpaper]{article} % Font size and paper type
 
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
@@ -37,12 +37,12 @@
 
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
-% One, two or three address lines can be specified 
+% One, two or three header lines can be specified
 \let \@addressone \relax
 \let \@addresstwo \relax
 \let \@addressthree \relax
 
-% \address command can be used to set the first, second, and third address (last 2 optional)
+% \address command can be used to set the first, second, and third header line
 \def \address #1{
   \@ifundefined{@addresstwo}{
     \def \@addresstwo {#1}
@@ -80,12 +80,12 @@
 \renewcommand{\document}{
   \ori@document  % Begin document
   \printname % Print the name specified with \name
-  \@ifundefined{@addressone}{}{ % Print the first address if specified
-    \printaddress{\@addressone}}
-  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+  \@ifundefined{@addresstwo}{}{ % Print the first address if specified
     \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+  \@ifundefined{@addressthree}{}{ % Print the second address if specified
     \printaddress{\@addressthree}}
+  \@ifundefined{@addressone}{}{ % Print the third address if specified
+    \printaddress{\@addressone}}
 }
 
 %----------------------------------------------------------------------------------------
@@ -111,11 +111,11 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\em #4} % Italic job title and location
-  }\smallskip
+ {\bf #1}
+ \ifthenelse{\equal{#3}{}}{}{ --- {\em #3}}%
+ \ifthenelse{\equal{#2}{}}{}{ --- {#2}}%
+ \ifthenelse{\equal{#4}{}}{}{ --- {\em #4}}%
+ \smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
